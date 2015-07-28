@@ -1,0 +1,22 @@
+---
+# file: roles/htpc/tasks/main.yml
+
+- name: install_repositories_additional
+  apt_repository: repo='{{ item }}' state=present update_cache=yes
+  with_items:
+    - ppa:team-xbmc/ppa
+
+- name: install_packages
+  apt: name='{{ item }}' state=present
+  with_flattened:
+    - packages_xorg
+    - packages_xapps
+    - packages_drivers
+
+- name: install_kodi_service
+  copy: src=kodi.service dest=/etc/systemd/system/kodi.service owner=root group=root mode=0644
+
+- name: enable_additional_services
+  service: name='{{ item }}' enabled=yes state=started
+  with_items:
+    - kodi

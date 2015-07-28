@@ -1,0 +1,5 @@
+---
+# file: roles/htpc/meta/main.yml
+
+dependencies:
+  - { role: "common" }

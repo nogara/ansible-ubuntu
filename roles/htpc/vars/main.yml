@@ -1,0 +1,11 @@
+---
+# file: roles/htpc/vars/main.yml
+
+packages_xorg:
+  - xorg
+
+packages_xapps:
+  - kodi
+
+packages_drivers:
+  - lirc

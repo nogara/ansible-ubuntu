@@ -1,0 +1,24 @@
+---
+# file: roles/common/vars/main.yml
+
+packages_base:
+  - smartmontools
+  - lm-sensors
+  - haveged
+  - openssh-server
+  - docker-engine
+
+packages_misc:
+  - htop
+  - iotop
+  - sshpass
+  - zip
+  - unzip
+  - rar
+  - unrar
+  - p7zip
+  - mercurial
+  - silversearcher-ag
+
+packages_devel:
+  - build-essential

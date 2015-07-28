@@ -1,0 +1,5 @@
+---
+# file: roles/myhtpc/meta/main.yml
+
+dependencies:
+  - { role: "htpc" }

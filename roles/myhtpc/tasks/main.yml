@@ -1,0 +1,22 @@
+---
+# file: roles/myhtpc/tasks/main.yml
+
+- name: install_packages_nvidia_drivers
+  apt: name='{{ item }}' state=present install_recommends=no
+  with_flattened:
+    - packages_drivers
+
+- name: create_xorg_config_directory
+  file: path=/etc/X11/xorg.conf.d state=directory owner=root group=root mode=0755
+
+- name: install_config_nvidia
+  copy: src=20-nvidia.conf dest=/etc/X11/xorg.conf.d/20-nvidia.conf owner=root group=root mode=0644
+
+- name: install_config_lirc_daemon
+  copy: src=hardware.conf dest=/etc/lirc/hardware.conf owner=root group=root mode=0644
+
+- name: install_config_lirc_remote
+  copy: src=lircd.conf dest=/etc/lirc/lircd.conf owner=root group=root mode=0644
+
+- name: configure_lirc_devices
+  copy: src=99-remote_control_lirc.rules dest=/etc/udev/rules.d/99-remote_control_lirc.rules owner=root group=root mode=0644
