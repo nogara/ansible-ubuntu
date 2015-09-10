@@ -1,8 +1,13 @@
 ---
 # file: roles/myhtpc/tasks/main.yml
 
-- name: install_packages_nvidia_drivers
-  apt: name='{{ item }}' state=present install_recommends=no
+- name: install_repositories_additional
+  apt_repository: repo='{{ item }}' state=present update_cache=yes
+  with_items:
+    - ppa:graphics-drivers/ppa
+
+- name: install_packages_drivers
+  apt: name={{ item }} state=present install_recommends=no
   with_flattened:
     - packages_drivers
 

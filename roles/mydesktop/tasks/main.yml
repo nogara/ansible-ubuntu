@@ -1,0 +1,21 @@
+---
+# file: roles/mydesktop/tasks/main.yml
+
+- name: install_repositories_additional
+  apt_repository: repo='{{ item }}' state=present update_cache=yes
+  with_items:
+    - ppa:graphics-drivers/ppa
+
+- name: install_packages_drivers
+  apt: name={{ item }} state=present
+  with_flattened:
+    - packages_drivers
+
+- name: create_xorg_config_directory
+  file: path=/etc/X11/xorg.conf.d state=directory owner=root group=root mode=0755
+
+- name: install_config_nvidia
+  copy: src=20-nvidia.conf dest=/etc/X11/xorg.conf.d/20-nvidia.conf owner=root group=root mode=0644
+
+- name: install_config_sensors
+  copy: src=asusCVF.conf dest=/etc/sensors.d/asusCVF.conf owner=root group=root mode=0644

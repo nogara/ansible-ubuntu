@@ -1,0 +1,16 @@
+---
+# file: roles/mymacbook/tasks/main.yml
+
+- name: install_repositories_additional
+  apt_repository: repo='{{ item }}' state=present update_cache=yes
+  with_items:
+    - ppa:linrunner/tlp
+
+- name: install_packages_additional
+  apt: name={{ item }} state=present
+  with_flattened:
+    - packages_drivers
+
+- name: config_macbook_fnkeys
+  copy: src=hid_apple.conf dest=/etc/modprobe.d/hid_apple.conf owner=root group=root mode=0644
+  notify: update_initramfs

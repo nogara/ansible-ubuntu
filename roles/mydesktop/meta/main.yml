@@ -1,0 +1,5 @@
+---
+# file: roles/mydesktop/meta/main.yml
+
+dependencies:
+  - { role: "desktop" }

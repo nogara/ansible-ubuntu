@@ -1,0 +1,5 @@
+---
+# file: roles/mymacbook/vars/main.yml
+
+packages_drivers:
+  - tlp

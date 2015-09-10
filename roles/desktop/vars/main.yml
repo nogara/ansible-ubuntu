@@ -1,0 +1,40 @@
+---
+# file: roles/desktop/vars/main.yml
+
+packages_misc:
+  - autojump
+  - aria2
+  - ddclient
+  - asciinema
+
+packages_devel:
+  - ruby-dev
+  - rbenv
+  - ruby-build
+  - python-dev
+  - python-pip
+  - python-virtualenv
+  - vagrant
+
+packages_xdeps:
+  - numix-icon-theme-circle
+  - numix-gtk-theme
+  - unity-tweak-tool
+  - compizconfig-settings-manager
+
+packages_xapps:
+  - gimp
+  - rawtherapee
+  - calibre
+  - xclip
+  - shutter
+  - virtualbox
+  - dropbox
+  - google-chrome-stable
+  - google-talkplugin
+  - sublime-text-installer
+  - caffeine
+  - telegram
+  - unity-mail
+  - calendar-indicator
+  - pushbullet-indicator

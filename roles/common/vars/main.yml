@@ -9,16 +9,24 @@ packages_base:
   - docker-engine
 
 packages_misc:
+  - traceroute
   - htop
   - iotop
+  - screen
   - sshpass
   - zip
   - unzip
   - rar
   - unrar
   - p7zip
+  - git
   - mercurial
   - silversearcher-ag
 
 packages_devel:
   - build-essential
+  - autoconf
+  - automake
+  - libtool
+  - bison
+  - flex

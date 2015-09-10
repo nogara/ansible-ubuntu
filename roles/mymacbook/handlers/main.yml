@@ -1,0 +1,5 @@
+---
+# file: roles/mymacbook/handlers/main.yml
+
+- name: update_initramfs
+  command: update-initramfs -u -k all

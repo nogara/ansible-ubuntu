@@ -1,0 +1,40 @@
+---
+# file: roles/desktop/tasks/main.yml
+
+- name: install_repositories_additional_keys
+  apt_key: url='{{ item }}' state=present
+  with_items:
+    - https://dl.google.com/linux/linux_signing_key.pub                               # google
+    - https://pgp.mit.edu/pks/lookup?op=get&search=0xFC918B335044912E                 # dropbox
+
+- name: install_repositories_additional
+  apt_repository: repo='{{ item }}' state=present update_cache=yes
+  with_items:
+    - deb http://dl.google.com/linux/chrome/deb/ stable main
+    - deb http://dl.google.com/linux/talkplugin/deb/ stable main
+    - deb http://linux.dropbox.com/ubuntu {{ ansible_distribution_release }} main
+    - ppa:webupd8team/java
+    - ppa:webupd8team/sublime-text-3
+    - ppa:numix/ppa
+    - ppa:caffeine-developers/ppa
+    - ppa:atareao/telegram
+    - ppa:atareao/atareao
+    - ppa:zanchey/asciinema
+
+- name: disable_package_repositories_install
+  copy: content="" dest='{{ item }}' owner=root group=root mode=0644
+  with_items:
+    - /etc/default/google-chrome
+    - /etc/default/google-talkplugin
+    - /etc/default/dropbox-repo
+
+- name: install_packages
+  apt: name={{ item }} state=present
+  with_flattened:
+    - packages_misc
+    - packages_devel
+    - packages_xdeps
+    - packages_xapps
+
+- name: add_user_to_docker_group
+  user: name={{ default_user }} groups=docker append=yes state=present
