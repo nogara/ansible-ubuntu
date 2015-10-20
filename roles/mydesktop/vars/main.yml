@@ -2,5 +2,5 @@
 # file: roles/mydesktop/vars/main.yml
 
 packages_drivers:
-  - nvidia-352
+  - nvidia-355
   - vdpau-va-driver
