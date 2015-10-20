@@ -1,6 +1,0 @@
----
-# file: roles/myhtpc/vars/main.yml
-
-packages_drivers:
-  - nvidia-340
-  - vdpau-va-driver

@@ -1,5 +1,0 @@
-# Change permissions of lirc devices
-KERNEL=="lirc[0-9]*", SUBSYSTEM=="lirc", MODE="0666"
-
-# Set rc devices to lirc protocol only
-SUBSYSTEM=="rc", ATTRS{protocols}=="*lirc*" RUN+="/bin/sh -c 'echo lirc > /sys$env{DEVPATH}/protocols'"
