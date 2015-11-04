@@ -1,2 +1,0 @@
-CLUTTER_PAINT=disable-clipped-redraws:disable-culling
-CLUTTER_VBLANK=True

@@ -16,3 +16,9 @@
 
 - name: install_config_nvidia
   copy: src=20-nvidia.conf dest=/etc/X11/xorg.conf.d/20-nvidia.conf owner=root group=root mode=0644
+
+- name: install_config_clutter_paint
+  lineinfile: dest=/etc/environment regexp='^CLUTTER_PAINT=' line='CLUTTER_PAINT=disable-clipped-redraws:disable-culling'
+
+- name: install_config_clutter_vblank
+  lineinfile: dest=/etc/environment regexp='^CLUTTER_VBLANK=' line='CLUTTER_VBLANK=True'
