@@ -22,6 +22,7 @@ packages_xdeps:
   - numix-gtk-theme
 
 packages_xapps:
+  - thunderbird
   - gimp
   - rawtherapee
   - calibre
@@ -31,3 +32,6 @@ packages_xapps:
   - insync
   - sublime-text-installer
   - telegram
+
+packages_remove:
+  - evolution
