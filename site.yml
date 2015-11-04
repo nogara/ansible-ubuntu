@@ -5,8 +5,6 @@
   sudo: true
   roles:
     - {role: common, tags: common}
-    - {role: htpc, tags: htpc}
-    - {role: myhtpc, tags: myhtpc}
     - {role: desktop, tags: desktop}
     - {role: mydesktop, tags: mydesktop}
     - {role: mymacbook, tags: mymacbook}

@@ -3,4 +3,3 @@
 
 packages_drivers:
   - nvidia-355
-  - vdpau-va-driver

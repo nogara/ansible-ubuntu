@@ -20,8 +20,6 @@ packages_devel:
 packages_xdeps:
   - numix-icon-theme-circle
   - numix-gtk-theme
-  - unity-tweak-tool
-  - compizconfig-settings-manager
 
 packages_xapps:
   - gimp
@@ -30,9 +28,6 @@ packages_xapps:
   - xclip
   - shutter
   - virtualbox
-  - dropbox
-  - google-chrome-stable
-  - google-talkplugin
+  - insync
   - sublime-text-installer
-  - caffeine
   - telegram

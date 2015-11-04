@@ -16,6 +16,3 @@
 
 - name: install_config_nvidia
   copy: src=20-nvidia.conf dest=/etc/X11/xorg.conf.d/20-nvidia.conf owner=root group=root mode=0644
-
-- name: install_config_sensors
-  copy: src=asusCVF.conf dest=/etc/sensors.d/asusCVF.conf owner=root group=root mode=0644
