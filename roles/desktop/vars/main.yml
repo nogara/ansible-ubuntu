@@ -20,6 +20,9 @@ packages_devel:
 packages_xdeps:
   - numix-icon-theme-circle
   - numix-gtk-theme
+  - fonts-croscore
+  - fonts-crosextra-caladea
+  - fonts-crosextra-carlito
 
 packages_xapps:
   - thunderbird
