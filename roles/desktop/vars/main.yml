@@ -29,6 +29,8 @@ packages_xapps:
   - xclip
   - shutter
   - virtualbox
+  - google-chrome-stable
+  - google-talkplugin
   - insync
   - sublime-text-installer
   - telegram
