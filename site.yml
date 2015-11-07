@@ -4,7 +4,7 @@
 - hosts: all
   sudo: true
   roles:
-    - {role: common, tags: common}
-    - {role: desktop, tags: desktop}
+    - {role: common, tags: ['common', 'desktop', 'mydesktop', 'mymacbook']}
+    - {role: desktop, tags: ['desktop', 'mydesktop', 'mymacbook']}
     - {role: mydesktop, tags: mydesktop}
     - {role: mymacbook, tags: mymacbook}

@@ -2,4 +2,6 @@
 # file: roles/mymacbook/vars/main.yml
 
 packages_drivers:
+  - intel-microcode
+  - bcmwl-kernel-source
   - tlp
