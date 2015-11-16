@@ -41,3 +41,4 @@ packages_xapps:
 
 packages_remove:
   - evolution
+  - apport
