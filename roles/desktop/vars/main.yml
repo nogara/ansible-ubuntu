@@ -18,7 +18,6 @@ packages_devel:
   - vagrant
 
 packages_xdeps:
-  - xserver-xorg-input-libinput
   - numix-icon-theme-circle
   - numix-gtk-theme
   - fonts-croscore
