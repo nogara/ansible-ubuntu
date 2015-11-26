@@ -3,4 +3,4 @@
 
 packages_drivers:
   - amd64-microcode
-  - nvidia-355
+  - nvidia-358
