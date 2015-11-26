@@ -27,6 +27,7 @@ packages_xdeps:
 packages_xapps:
   - thunderbird
   - gimp
+  - inkscape
   - rawtherapee
   - calibre
   - xclip
