@@ -17,6 +17,7 @@
     - ppa:webupd8team/sublime-text-3
     - ppa:numix/ppa
     - ppa:atareao/telegram
+    - ppa:quadrispro/xps13
 
 - name: disable_package_repositories_install
   copy: content="" dest='{{ item }}' owner=root group=root mode=0644
