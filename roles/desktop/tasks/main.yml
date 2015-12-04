@@ -18,6 +18,7 @@
     - ppa:numix/ppa
     - ppa:atareao/telegram
     - ppa:quadrispro/xps13
+    - ppa:eugenesan/ppa
 
 - name: disable_package_repositories_install
   copy: content="" dest='{{ item }}' owner=root group=root mode=0644
