@@ -26,7 +26,6 @@ packages_xdeps:
   - fonts-crosextra-carlito
 
 packages_xapps:
-  - thunderbird
   - gimp
   - inkscape
   - rawtherapee
@@ -36,7 +35,6 @@ packages_xapps:
   - virtualbox
   - google-chrome-stable
   - google-talkplugin
-  - insync
   - sublime-text-installer
   - telegram
 
