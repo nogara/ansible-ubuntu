@@ -38,8 +38,6 @@ packages_xapps:
   - google-talkplugin
   - sublime-text-installer
   - telegram
-  - smartgit
-  - smartgithg
 
 packages_remove:
   - evolution

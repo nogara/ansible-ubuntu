@@ -5,20 +5,16 @@
   apt_key: url='{{ item }}' state=present
   with_items:
     - https://dl.google.com/linux/linux_signing_key.pub                               # google
-    - https://d2t3ff60b2tol4.cloudfront.net/services@insynchq.com.gpg.key             # insync
 
 - name: install_repositories_additional
   apt_repository: repo='{{ item }}' state=present update_cache=yes
   with_items:
     - deb http://dl.google.com/linux/chrome/deb/ stable main
     - deb http://dl.google.com/linux/talkplugin/deb/ stable main
-    - deb http://apt.insynchq.com/ubuntu {{ ansible_distribution_release }} non-free contrib
     - ppa:webupd8team/java
     - ppa:webupd8team/sublime-text-3
     - ppa:numix/ppa
     - ppa:atareao/telegram
-    - ppa:quadrispro/xps13
-    - ppa:eugenesan/ppa
 
 - name: disable_package_repositories_install
   copy: content="" dest='{{ item }}' owner=root group=root mode=0644
