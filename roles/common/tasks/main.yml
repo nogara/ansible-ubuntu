@@ -9,7 +9,7 @@
 - name: install_repositories_additional
   apt_repository: repo='{{ item }}' state=present update_cache=yes
   with_items:
-    - deb https://apt.dockerproject.org/repo ubuntu-{{ ansible_distribution_release }} main
+    - deb https://apt.dockerproject.org/repo ubuntu-xenial main
 
 - name: install_packages
   apt: name='{{ item }}' state=present
