@@ -16,6 +16,7 @@ packages_devel:
   - python-virtualenv
   - oracle-java8-installer
   - vagrant
+  - s3cmd
 
 packages_xdeps:
   - xserver-xorg-input-libinput

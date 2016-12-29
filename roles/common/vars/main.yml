@@ -24,6 +24,9 @@ packages_misc:
   - silversearcher-ag
   - hfsprogs
   - vim
+  - nfs-common
+  - nfs-kernel-server
+  - zsh
 
 packages_devel:
   - build-essential
