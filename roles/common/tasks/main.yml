@@ -14,9 +14,9 @@
 - name: install_packages
   apt: name='{{ item }}' state=present
   with_flattened:
-    - packages_base
-    - packages_misc
-    - packages_devel
+    - "{{ packages_base }}"
+    - "{{ packages_misc }}"
+    - "{{ packages_devel }}"
 
 - name: optimize_disk_io_schedulers
   copy: src=60-io_schedulers.rules dest=/etc/udev/rules.d/60-io_schedulers.rules owner=root group=root mode=0644

@@ -32,15 +32,15 @@
 - name: install_packages
   apt: name={{ item }} state=present
   with_flattened:
-    - packages_misc
-    - packages_devel
-    - packages_xdeps
-    - packages_xapps
+    - "{{ packages_misc }}"
+    - "{{ packages_devel }}"
+    - "{{ packages_xdeps }}"
+    - "{{ packages_xapps }}"
 
 - name: remove_packages
   apt: name={{ item }} state=absent purge=yes
   with_flattened:
-    - packages_remove
+    - "{{ packages_remove }}"
 
 - name: add_user_to_docker_group
   user: name={{ default_user }} groups=docker append=yes state=present

@@ -9,7 +9,7 @@
 - name: install_packages_drivers
   apt: name={{ item }} state=present
   with_flattened:
-    - packages_drivers
+    - "{{ packages_drivers }}"
 
 - name: create_xorg_config_directory
   file: path=/etc/X11/xorg.conf.d state=directory owner=root group=root mode=0755
